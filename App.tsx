@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -12,8 +11,8 @@ import Footer from './components/Footer';
 
 const App: React.FC = () => {
   return (
-    <div className="min-h-screen bg-background text-white selection:bg-primary selection:text-white font-sans">
-      <div className="fixed inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 pointer-events-none z-40 mix-blend-overlay"></div>
+    <div className="min-h-screen bg-gray-50 dark:bg-background text-gray-900 dark:text-white selection:bg-primary selection:text-white font-sans transition-colors duration-300">
+      <div className="fixed inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10 dark:opacity-20 pointer-events-none z-40 mix-blend-overlay"></div>
       
       <Navbar />
       

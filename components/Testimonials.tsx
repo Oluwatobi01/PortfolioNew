@@ -1,13 +1,12 @@
-
 import React from 'react';
 import { TESTIMONIALS } from '../constants';
 
 const Testimonials: React.FC = () => {
   return (
-    <section id="testimonials" className="py-24 px-6 relative bg-surface/30 scroll-mt-28">
+    <section id="testimonials" className="py-24 px-6 relative bg-gray-50 dark:bg-surface/30 scroll-mt-28">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
+          <h2 className="text-4xl md:text-5xl font-display font-bold mb-6 text-gray-900 dark:text-white">
             What People Say
           </h2>
         </div>
@@ -17,9 +16,9 @@ const Testimonials: React.FC = () => {
           {TESTIMONIALS.map((testimonial) => (
             <div 
               key={testimonial.id}
-              className="bg-surface/50 border border-white/5 rounded-3xl p-8 hover:bg-surface hover:border-white/10 transition-all duration-300 flex flex-col items-center text-center"
+              className="bg-white dark:bg-surface/50 border border-gray-200 dark:border-white/5 rounded-3xl p-8 hover:bg-gray-50 dark:hover:bg-surface hover:border-primary/20 dark:hover:border-white/10 transition-all duration-300 flex flex-col items-center text-center shadow-lg dark:shadow-none"
             >
-              <div className="w-20 h-20 mb-6 rounded-full overflow-hidden border-2 border-white/10 bg-white/5">
+              <div className="w-20 h-20 mb-6 rounded-full overflow-hidden border-2 border-gray-200 dark:border-white/10 bg-gray-100 dark:bg-white/5">
                 <img 
                   src={testimonial.image} 
                   alt={testimonial.name} 
@@ -27,13 +26,13 @@ const Testimonials: React.FC = () => {
                 />
               </div>
               
-              <h3 className="text-lg font-bold text-white mb-1">{testimonial.name}</h3>
-              <div className="text-sm text-gray-400 mb-6 flex flex-col">
-                <span className="text-secondary">{testimonial.role}</span>
+              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-1">{testimonial.name}</h3>
+              <div className="text-sm text-gray-500 dark:text-gray-400 mb-6 flex flex-col">
+                <span className="text-primary dark:text-secondary">{testimonial.role}</span>
                 <span>at {testimonial.company}</span>
               </div>
 
-              <p className="text-gray-300 text-sm leading-relaxed italic">
+              <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed italic">
                 "{testimonial.content}"
               </p>
             </div>
@@ -49,10 +48,10 @@ const Testimonials: React.FC = () => {
 
         {/* CTA Section */}
         <div className="text-center max-w-2xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl font-display font-bold mb-4 text-gray-900 dark:text-white">
             Want to build something great together?
           </h2>
-          <p className="text-gray-400 mb-8">
+          <p className="text-gray-600 dark:text-gray-400 mb-8">
             I'm always excited to hear about new projects and opportunities.
           </p>
           <a 

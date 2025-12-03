@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { SKILLS } from '../constants';
 import { SkillCategory } from '../types';
@@ -25,10 +24,10 @@ const Skills: React.FC = () => {
     <section id="skills" className="py-24 px-6 relative scroll-mt-28">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-7xl font-display font-bold mb-6 tracking-tighter">
+          <h2 className="text-5xl md:text-7xl font-display font-bold mb-6 tracking-tighter text-gray-900 dark:text-white">
             Skills & <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">Tech Stack</span>
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
             A collection of tools I use to build modern, efficient, and delightful applications across web and mobile platforms.
           </p>
         </div>
@@ -43,7 +42,7 @@ const Skills: React.FC = () => {
                 px-6 py-2.5 rounded-full text-sm font-bold transition-all duration-300
                 ${activeCategory === cat 
                   ? 'bg-primary text-white shadow-lg shadow-primary/25 scale-105' 
-                  : 'bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white'}
+                  : 'bg-white dark:bg-white/5 text-gray-600 dark:text-gray-400 border border-gray-200 dark:border-transparent hover:bg-gray-100 dark:hover:bg-white/10 hover:text-gray-900 dark:hover:text-white'}
               `}
             >
               {cat}
@@ -56,17 +55,17 @@ const Skills: React.FC = () => {
           {filteredSkills.map((skill) => (
             <div 
               key={skill.name}
-              className="group flex flex-col items-center justify-center p-6 bg-surface/50 border border-white/5 rounded-3xl hover:bg-white/5 hover:border-white/10 transition-all duration-300 hover:-translate-y-1"
+              className="group flex flex-col items-center justify-center p-6 bg-white dark:bg-surface/50 border border-gray-200 dark:border-white/5 rounded-3xl hover:bg-gray-50 dark:hover:bg-white/5 hover:border-primary/20 dark:hover:border-white/10 transition-all duration-300 hover:-translate-y-1 shadow-md dark:shadow-none"
             >
               <div className="w-16 h-16 mb-4 flex items-center justify-center relative">
                  <div className="absolute inset-0 bg-white/5 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <img 
                   src={skill.icon} 
                   alt={skill.name} 
-                  className={`w-12 h-12 object-contain transition-transform duration-300 group-hover:scale-110 ${skill.invertDark ? 'invert-on-dark' : ''}`}
+                  className={`w-12 h-12 object-contain transition-transform duration-300 group-hover:scale-110 ${skill.invertDark ? 'dark:invert-on-dark' : ''}`}
                 />
               </div>
-              <h3 className="text-white font-bold text-lg mb-1">{skill.name}</h3>
+              <h3 className="text-gray-900 dark:text-white font-bold text-lg mb-1">{skill.name}</h3>
               <p className={`text-sm font-medium ${getLevelColor(skill.level)}`}>
                 {skill.level}
               </p>

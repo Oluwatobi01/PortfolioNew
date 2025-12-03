@@ -4,7 +4,7 @@ import { ArrowDown } from 'lucide-react';
 const Hero: React.FC = () => {
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center pt-24 pb-12 px-6 overflow-hidden">
-      {/* Background Blobs (Adjusted for less intrusion) */}
+      {/* Background Blobs */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] animate-blob mix-blend-screen pointer-events-none"></div>
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-secondary/20 rounded-full blur-[120px] animate-blob animation-delay-2000 mix-blend-screen pointer-events-none"></div>
 
@@ -13,18 +13,18 @@ const Hero: React.FC = () => {
         {/* Left Content */}
         <div className="flex flex-col gap-8 order-2 lg:order-1 text-center lg:text-left">
           <div className="space-y-6">
-             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm shadow-sm w-fit mx-auto lg:mx-0">
+             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-gray-200 dark:border-white/10 bg-white/50 dark:bg-white/5 backdrop-blur-sm shadow-sm w-fit mx-auto lg:mx-0">
               <span className="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
-              <span className="text-xs font-medium text-secondary tracking-wide uppercase">Available for Hire</span>
+              <span className="text-xs font-medium text-gray-600 dark:text-secondary tracking-wide uppercase">Available for Hire</span>
             </div>
 
-            <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tighter leading-[1.1]">
+            <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tighter leading-[1.1] text-gray-900 dark:text-white">
               Crafting Digital <br/>
               <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Experiences</span>
             </h1>
 
-            <p className="text-lg md:text-xl text-gray-400 font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
-              I'm <span className="text-white font-medium">Tobi</span>. A Mobile & Full-Stack Developer passionate about building intuitive apps and websites with clean code and user-centric design.
+            <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
+              I'm <span className="text-gray-900 dark:text-white font-medium">Tobi</span>. A Mobile & Full-Stack Developer passionate about building intuitive apps and websites with clean code and user-centric design.
             </p>
           </div>
 
@@ -37,7 +37,7 @@ const Hero: React.FC = () => {
             </a>
             <a 
               href="#contact" 
-              className="px-8 py-4 bg-white/5 text-white border border-white/10 font-bold rounded-full hover:bg-white/10 transition-all duration-200 backdrop-blur-sm"
+              className="px-8 py-4 bg-white/50 dark:bg-white/5 text-gray-900 dark:text-white border border-gray-200 dark:border-white/10 font-bold rounded-full hover:bg-white/80 dark:hover:bg-white/10 transition-all duration-200 backdrop-blur-sm"
             >
               Get In Touch
             </a>
@@ -51,27 +51,27 @@ const Hero: React.FC = () => {
             <div className="absolute -inset-1 rounded-3xl bg-gradient-to-tr from-primary via-secondary to-primary opacity-75 blur-xl animate-pulse"></div>
             
             {/* Image Container */}
-            <div className="relative h-full w-full rounded-2xl overflow-hidden border border-white/10 bg-surface">
+            <div className="relative h-full w-full rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10 bg-white dark:bg-surface shadow-2xl dark:shadow-none">
               <img 
-                src="https://images.unsplash.com/photo-1626285861696-9f0bf5a49c6d?q=80&w=800&auto=format&fit=crop" 
+                src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?q=80&w=800&auto=format&fit=crop" 
                 alt="Oluwatobi - Developer" 
                 className="w-full h-full object-cover"
               />
-              {/* Overlay Gradient for text readability/style */}
+              {/* Overlay Gradient */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
             </div>
 
-            {/* Floating Badge (optional decoration) */}
-            <div className="absolute -bottom-6 -left-6 bg-surface/90 backdrop-blur-md border border-white/10 p-4 rounded-2xl shadow-xl hidden sm:block">
+            {/* Floating Badge */}
+            <div className="absolute -bottom-6 -left-6 bg-white/90 dark:bg-surface/90 backdrop-blur-md border border-gray-200 dark:border-white/10 p-4 rounded-2xl shadow-xl hidden sm:block">
               <div className="flex items-center gap-3">
                 <div className="flex -space-x-2">
-                  <div className="w-8 h-8 rounded-full bg-gray-700 border-2 border-surface"></div>
-                  <div className="w-8 h-8 rounded-full bg-gray-600 border-2 border-surface"></div>
-                  <div className="w-8 h-8 rounded-full bg-gray-500 border-2 border-surface flex items-center justify-center text-[10px] font-bold">+50</div>
+                  <div className="w-8 h-8 rounded-full bg-gray-300 dark:bg-gray-700 border-2 border-white dark:border-surface"></div>
+                  <div className="w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-600 border-2 border-white dark:border-surface"></div>
+                  <div className="w-8 h-8 rounded-full bg-gray-100 dark:bg-gray-500 border-2 border-white dark:border-surface flex items-center justify-center text-[10px] font-bold text-gray-800 dark:text-white">+50</div>
                 </div>
                 <div>
-                  <p className="text-xs text-gray-400">Happy Clients</p>
-                  <p className="text-sm font-bold">Worldwide</p>
+                  <p className="text-xs text-gray-500 dark:text-gray-400">Happy Clients</p>
+                  <p className="text-sm font-bold text-gray-900 dark:text-white">Worldwide</p>
                 </div>
               </div>
             </div>
@@ -80,7 +80,7 @@ const Hero: React.FC = () => {
 
       </div>
 
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 animate-bounce opacity-30 text-white hidden lg:block">
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 animate-bounce opacity-30 text-gray-900 dark:text-white hidden lg:block">
         <ArrowDown size={24} />
       </div>
     </section>
