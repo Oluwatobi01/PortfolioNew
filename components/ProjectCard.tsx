@@ -1,0 +1,77 @@
+import React from 'react';
+import { ExternalLink, Github, Smartphone, Monitor } from 'lucide-react';
+import { Project } from '../types';
+
+interface ProjectCardProps {
+  project: Project;
+}
+
+const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
+  return (
+    <div className="group relative rounded-3xl overflow-hidden bg-surface border border-white/5 hover:border-white/20 transition-all duration-500">
+      {/* Image Container */}
+      <div className="relative h-64 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
+        <img 
+          src={project.image} 
+          alt={project.title} 
+          className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+        />
+        
+        {/* Category Badge */}
+        <div className="absolute top-4 left-4 z-20 px-3 py-1 rounded-full bg-black/50 backdrop-blur-md border border-white/10 text-xs font-medium uppercase tracking-wider text-white flex items-center gap-2">
+          {project.category === 'mobile' ? <Smartphone size={12} /> : <Monitor size={12} />}
+          {project.category}
+        </div>
+      </div>
+
+      {/* Content */}
+      <div className="p-6 md:p-8">
+        <h3 className="text-2xl font-display font-bold mb-3 group-hover:text-secondary transition-colors">
+          {project.title}
+        </h3>
+        <p className="text-gray-400 text-sm leading-relaxed mb-6 line-clamp-3">
+          {project.description}
+        </p>
+
+        {/* Tags */}
+        <div className="flex flex-wrap gap-2 mb-8">
+          {project.tags.map((tag) => (
+            <span key={tag} className="text-xs px-2.5 py-1 rounded-md bg-white/5 text-gray-300 border border-white/5">
+              {tag}
+            </span>
+          ))}
+        </div>
+
+        {/* Links */}
+        <div className="flex items-center gap-4">
+          {project.liveLink && (
+            <a 
+              href={project.liveLink} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl bg-white text-black font-bold hover:bg-secondary transition-colors text-sm"
+            >
+              <ExternalLink size={16} />
+              Live Demo
+            </a>
+          )}
+          {project.githubLink && (
+            <a 
+              href={project.githubLink}
+              target="_blank" 
+              rel="noopener noreferrer"
+              className={`flex items-center justify-center gap-2 py-3 rounded-xl border border-white/20 hover:bg-white/10 transition-colors text-sm ${!project.liveLink ? 'flex-1' : 'px-4'}`}
+              title="View Source Code"
+            >
+              <Github size={18} />
+              {!project.liveLink && "View Code"}
+            </a>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ProjectCard;
