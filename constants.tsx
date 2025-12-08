@@ -3,9 +3,29 @@ import { Project, NavItem, ExperienceItem, Skill, Testimonial } from './types';
 
 export const PROJECTS: Project[] = [
   {
+    id: 'journaly',
+    title: 'Journaly',
+    description: 'A minimalist, distraction-free journaling application focused on mental wellness. Features secure local storage, mood tracking, and a clean, accessible UI designed to encourage daily reflection habits.',
+    tags: ['React Native', 'TypeScript', 'Local Storage', 'Wellness'],
+    liveLink: 'https://journalybytobi.netlify.app/',
+    githubLink: 'https://github.com/Oluwatobi01/Journaly',
+    image: 'https://picsum.photos/seed/journaly/800/600',
+    category: 'mobile'
+  },
+  {
+    id: 'habitrackerz',
+    title: 'LevelUp Habit Tracker',
+    description: 'Gamified habit tracking app designed for Gen Z. Visualizes progress with streaks and rewards, utilizing complex state management to persist user data and ensure a motivating, interactive experience.',
+    tags: ['React', 'Gamification', 'State Mgmt', 'PWA'],
+    liveLink: 'https://habitrackerz.netlify.app/',
+    githubLink: 'https://github.com/Oluwatobi01/LevelUp---Gen-Z-Habit-Tracker',
+    image: 'https://picsum.photos/seed/habitrackerz/800/600',
+    category: 'mobile'
+  },
+  {
     id: 'rydr',
     title: 'Rydr Taxi Booking',
-    description: 'A comprehensive taxi booking platform featuring real-time tracking, ride estimation, and secure payments. Built for scale and user convenience.',
+    description: 'Engineered a high-performance ride-hailing platform with real-time geolocation tracking using the Google Maps API. Implemented a complex pricing algorithm and secure payment gateway integration, handling concurrent user requests with 99.9% uptime on Cloud Run.',
     tags: ['React Native', 'Google Maps', 'Firebase', 'Cloud Run'],
     liveLink: 'https://rydr-taxi-booking-886875257442.us-west1.run.app/#/login',
     githubLink: 'https://github.com/Oluwatobi01/rydr',
@@ -15,7 +35,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'rideconnect',
     title: 'RideConnect',
-    description: 'Connecting riders with drivers seamlessly. Focuses on community-driven transport solutions with real-time socket connections.',
+    description: 'Developed a scalable carpooling solution leveraging Socket.io for bi-directional real-time communication between drivers and riders. Designed a resilient MongoDB schema to efficiently manage complex trip data and user relationships.',
     tags: ['React Native', 'Express', 'MongoDB', 'Socket.io'],
     liveLink: 'https://rideconnect-475354164030.us-west1.run.app',
     githubLink: 'https://github.com/Oluwatobi01/RideConnect',
@@ -25,7 +45,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'splitit',
     title: 'SplitIt',
-    description: 'Smart expense splitting application for groups and trips. Simplifies shared finances with an intuitive interface.',
+    description: 'Built a robust expense splitting application with TypeScript for type safety and maintainability. Features include an intuitive algorithm for minimizing transaction counts within groups and a responsive UI optimized for all devices.',
     tags: ['React', 'TypeScript', 'Tailwind', 'Node.js'],
     liveLink: 'https://splitit-770905328490.us-west1.run.app',
     githubLink: 'https://github.com/Oluwatobi01/SplitIt',
@@ -35,7 +55,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'melissa',
     title: 'Melissa AI Assistant',
-    description: 'An intelligent conversational agent designed to assist with daily tasks and information retrieval using advanced NLP.',
+    description: 'Created an advanced virtual assistant capable of executing system-level commands and retrieving real-time information. Utilized Python\'s rich ecosystem for Natural Language Processing (NLP) to interpret and act on user voice commands with high accuracy.',
     tags: ['Python', 'NLP', 'AI', 'Backend'],
     githubLink: 'https://github.com/Oluwatobi01/Melissa?tab=readme-ov-file',
     image: 'https://picsum.photos/seed/melissa/800/600',
@@ -44,7 +64,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'flocare',
     title: 'FloCare',
-    description: 'Healthcare management system streamlining patient records and appointment scheduling with a clean, accessible UI.',
+    description: 'Designed and developed a patient-centric healthcare management system. Focused on accessibility (WCAG compliance) and intuitive UX to ensure seamless navigation for elderly patients and healthcare providers.',
     tags: ['React', 'HealthTech', 'Netlify', 'UI/UX'],
     liveLink: 'https://flocare.netlify.app/',
     githubLink: 'https://github.com/Oluwatobi01/flocare',
@@ -54,7 +74,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'constbuild',
     title: 'ConstBuild',
-    description: 'Construction project management tool for contractors and clients to track progress and manage resources effectively.',
+    description: 'Deployed a real-time project management dashboard for the construction industry using Vue.js and Firebase. Enables instant synchronization of project milestones, resource allocation, and site reports across distributed teams.',
     tags: ['Vue', 'Firebase', 'Project Mgmt'],
     liveLink: 'https://constbuild.netlify.app/',
     githubLink: 'https://github.com/Oluwatobi01/constbuild',
@@ -64,7 +84,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'tubestamp',
     title: 'TubeStamp',
-    description: 'A utility tool for creators and viewers to generate and manage YouTube timestamps efficiently.',
+    description: 'Developed a productivity tool for YouTube content creators to automate timestamp generation. Integrated directly with the YouTube Data API to fetch video metadata and format chapters, saving creators hours of manual work.',
     tags: ['React', 'YouTube API', 'Productivity'],
     liveLink: 'https://tubestamp.netlify.app/',
     githubLink: 'https://github.com/Oluwatobi01/tubestamp',
@@ -74,7 +94,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'tobiai',
     title: 'Tobi AI',
-    description: 'A showcase of modern AI integration wrapped in a sleek, futuristic web interface.',
+    description: 'Implemented a futuristic landing page showcasing AI capabilities using Framer Motion for complex animations. Demonstrates high proficiency in modern CSS layouts and interactive frontend design patterns.',
     tags: ['React', 'AI Integration', 'Framer Motion'],
     liveLink: 'https://tobiai.netlify.app/',
     githubLink: 'https://github.com/Oluwatobi01/tobiai',
@@ -84,7 +104,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'bullo',
     title: 'Bullo',
-    description: 'A financial tracking dashboard designed for modern crypto and stock market enthusiasts.',
+    description: 'Architected a financial analytics dashboard visualizing complex crypto market data via interactive charts. Optimized API data fetching strategies to handle high-frequency updates without compromising UI performance.',
     tags: ['React', 'Finance', 'Charts', 'API'],
     liveLink: 'https://bullo.netlify.app/',
     githubLink: 'https://github.com/Oluwatobi01/bullo',
@@ -94,7 +114,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'masdrive',
     title: 'MasDrive',
-    description: 'Secure cloud storage interface allowing users to manage their digital assets with ease.',
+    description: 'Built a secure cloud storage frontend interface mimicking enterprise-grade file management systems. Focuses on intuitive file organization, drag-and-drop uploads, and responsive file previews.',
     tags: ['React', 'Cloud', 'Storage', 'UI Design'],
     liveLink: 'https://masdrive.netlify.app/',
     githubLink: 'https://github.com/Oluwatobi01/masdrive',
@@ -104,7 +124,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'tobiapclone',
     title: 'App Clone UI',
-    description: 'A pixel-perfect recreation of a popular mobile application interface demonstrating high-fidelity UI implementation.',
+    description: 'Executed a pixel-perfect recreation of a complex mobile application interface. Showcases extreme attention to detail in styling, layout responsiveness, and interaction fidelity using React components.',
     tags: ['React', 'Clone', 'UI/UX', 'Mobile Design'],
     liveLink: 'https://tobiapclone.netlify.app/',
     githubLink: 'https://github.com/Oluwatobi01/tobiapclone',
