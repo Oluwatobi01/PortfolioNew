@@ -53,15 +53,6 @@ export const PROJECTS: Project[] = [
     category: 'web'
   },
   {
-    id: 'melissa',
-    title: 'Melissa AI Assistant',
-    description: 'Created an advanced virtual assistant capable of executing system-level commands and retrieving real-time information. Utilized Python\'s rich ecosystem for Natural Language Processing (NLP) to interpret and act on user voice commands with high accuracy.',
-    tags: ['Python', 'NLP', 'AI', 'Backend'],
-    githubLink: 'https://github.com/Oluwatobi01/Melissa?tab=readme-ov-file',
-    image: 'https://picsum.photos/seed/melissa/800/600',
-    category: 'fullstack'
-  },
-  {
     id: 'flocare',
     title: 'FloCare',
     description: 'Designed and developed a patient-centric healthcare management system. Focused on accessibility (WCAG compliance) and intuitive UX to ensure seamless navigation for elderly patients and healthcare providers.',
