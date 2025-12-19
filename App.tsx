@@ -8,6 +8,7 @@ import Testimonials from './components/Testimonials';
 import About from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import BackToTop from './components/BackToTop';
 
 const App: React.FC = () => {
   return (
@@ -26,6 +27,7 @@ const App: React.FC = () => {
         <Contact />
       </main>
       
+      <BackToTop />
       <Footer />
     </div>
   );
